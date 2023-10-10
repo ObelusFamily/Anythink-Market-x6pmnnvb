@@ -1,3 +1,7 @@
+from sqlalchemy import create_engine
+import os
+database_url = os.environ['DATABASE_URL'].replace("postgres://", "postgresql://")
+engine = create_engine(database_url, echo=False)
 from sqlalchemy.sql import text
 import random
 import string
