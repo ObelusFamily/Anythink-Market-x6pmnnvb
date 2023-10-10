@@ -31,3 +31,4 @@ with engine.connect() as con:
       generated_item_id = row['id']
     comment = {'body': f'comment{i}', 'seller_id': generated_user_id, 'item_id': generated_item_id}
     con.execute(comment_statement, **comment)
+    
